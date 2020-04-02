@@ -3,6 +3,7 @@ package org.http4k.server
 import org.apache.hc.core5.http.ClassicHttpRequest
 import org.apache.hc.core5.http.ClassicHttpResponse
 import org.apache.hc.core5.http.ContentType
+import org.apache.hc.core5.http.ExceptionListener.STD_ERR
 import org.apache.hc.core5.http.Header
 import org.apache.hc.core5.http.HttpEntityContainer
 import org.apache.hc.core5.http.impl.bootstrap.HttpServer
@@ -77,6 +78,7 @@ data class ApacheServer(val port: Int = 8000, val address: InetAddress?) : Serve
                     .setBacklogSize(1000)
                     .build())
                 .register("*", Http4kRequestHandler(httpHandler))
+                .setExceptionListener(STD_ERR)
 
             if (address != null)
                 bootstrap.setLocalAddress(address)
