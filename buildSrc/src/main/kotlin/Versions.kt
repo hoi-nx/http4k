@@ -79,7 +79,9 @@ object Versions {
 
     const val httpclient: String = "4.5.12"
 
-    const val underscore: String = "1.53"
+     const val httpclient5: String = "5.0"
+
+     const val underscore: String = "1.53"
 
     const val alpn_boot: String = "8.1.13.v20181017"
 
@@ -91,7 +93,9 @@ object Versions {
 
     const val httpcore: String = "4.4.13"
 
-    const val result4k: String = "2.0.0"
+     const val httpcore5: String = "5.0"
+
+     const val result4k: String = "2.0.0"
 
     const val jade4j: String = "1.3.2"
 
